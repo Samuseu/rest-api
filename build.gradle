@@ -29,13 +29,18 @@ tasks.withType(JavaCompile) {
 
 dependencies {
     testImplementation(
+            //client
+            'io.rest-assured:rest-assured:5.4.0',
+            //config
+            'org.aeonbits.owner:owner:1.0.12',
+            //json
+            'com.fasterxml.jackson.core:jackson-databind:2.16.1',
+            //other
             'org.junit.jupiter:junit-jupiter-engine:5.10.1',
             'com.codeborne:selenide:7.0.4',
             'io.qameta.allure:allure-selenide:2.25.0',
-            'io.rest-assured:rest-assured:5.4.0'
     )
     runtimeOnly 'org.aspectj:aspectjweaver:1.9.21'
-
 }
 // нужно значение которые перекидывать в код
 tasks.withType(Test) {
