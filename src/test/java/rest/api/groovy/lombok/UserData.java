@@ -9,6 +9,4 @@ import lombok.Data;
 public class UserData {
     @JsonProperty("data")
     private User user;
-
-
 }
