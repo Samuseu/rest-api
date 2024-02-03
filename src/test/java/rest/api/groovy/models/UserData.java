@@ -1,6 +1,7 @@
 package rest.api.groovy.models;
 
-import io.qameta.allure.internal.shadowed.jackson.annotation.JsonIgnoreProperties;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true) // игнорирует все кроме того что нам нужно
 public class UserData {

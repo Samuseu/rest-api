@@ -1,7 +1,7 @@
 package rest.api.groovy.models;
 
-import io.qameta.allure.internal.shadowed.jackson.annotation.JsonIgnoreProperties;
-import io.qameta.allure.internal.shadowed.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 
