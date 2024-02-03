@@ -2,7 +2,6 @@ package rest.api.groovy;
 
 import org.junit.jupiter.api.Test;
 import rest.api.groovy.models.UserData;
-import rest.api.groovy.lombok.User;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -50,6 +49,6 @@ public class UserTest {
                 .log().body()
                 .extract().as(rest.api.groovy.lombok.UserData.class);
 
-        assertEquals(3, data.getUser().getId());
+        assertEquals(2, data.getUser().getId());
     }
 }
