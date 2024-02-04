@@ -49,6 +49,21 @@ public class UserTest {
                 .log().body()
                 .extract().as(rest.api.groovy.lombok.UserData.class);
 
+//        User user = User.builder().id(2).email("").build(); // Билдер чтобы быстрее создавать юзеров.
+
         assertEquals(2, data.getUser().getId());
+    }
+
+    @Test
+    void singUserFormatterOff() { // пример как работает форматер
+
+        // @formatter:off
+        Specs.request
+                .when()
+                    .get("/users/2")
+                .then()
+                    .spec(Specs.responseSpec)
+                    .log().body();
+        //@formatter:on
     }
 }
